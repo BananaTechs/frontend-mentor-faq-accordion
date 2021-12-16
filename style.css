@@ -1,4 +1,4 @@
-root {
+:root {
     /* Primary colours */
     --darkDesaturatedBlue: hsl(238, 29%, 16%);
     --softRed: hsl(14, 88%, 65%);
@@ -21,12 +21,162 @@ root {
     box-sizing: border-box;
 }
 
+/******************* Illustration *******************/
+
 body {
-    background-image: linear-gradient(hsl(273, 75%, 66%) 0%, hsl(240, 73%, 65%) 100%);
+    width: 100%;
+    background-image: linear-gradient(var(--softViolet), var(--softBlue));
     background-repeat: no-repeat;
     min-height: 100vh;
     font-family: 'Kumbh Sans', sans-serif;
+    font-size: 12px;
+    text-align: center;
 }
+
+main {
+    max-width: 375px;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 1024px) {
+    main {
+        max-width: 1024px;
+    }
+}
+
+.component {
+    width: 85%;
+    margin: 150px auto 0;
+    background-color: white;
+    background-image: url("./images/bg-pattern-mobile.svg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: 75%;
+    border-radius: 20px;
+}
+
+.illustration {
+    height: 100px;
+}
+
+.img-mobile.img-lady {
+    width: 75%;
+    position: relative;
+    top: -105px;
+}
+
+.img-desktop {
+    display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+    .component {
+        background-image: none;
+        display: flex;
+        align-items: center;
+        height: 430px;
+    }
+
+    .img-mobile {
+        display: none;
+    }
+
+    .img-desktop {
+        display: inline-block;
+    }
+
+    .illustration {
+        position: relative;
+        background-image: url("./images/bg-pattern-desktop.svg");
+        background-position: right -300px;
+        width: 40%;
+        height: 100%;
+    }
+
+    .lady-container {
+        overflow: hidden;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+    }
+
+    .img-desktop.img-lady {
+        width: 120%;
+    }
+
+    .img-box {
+        position: absolute;
+        bottom: 80px;
+        right: 270px;
+    }
+}
+
+/******************* FAQ *******************/
+
+.faq {
+    padding: 10%;
+    color: var(--grayishBlue);
+    line-height: 1.2rem;
+}
+
+.faq h1 {
+    color: var(--darkDesaturatedBlue);
+    margin-bottom: 20px;
+}
+
+.faq h2 {
+    font-size: 12px;
+    font-weight: 400;
+    margin: 15px 0;
+    color: var(--darkGrayishBlue);
+    cursor: pointer;
+}
+
+.faq h2:hover {
+    color: var(--softRed);
+}
+
+.faq h2::after {
+    content: url("./images/icon-arrow-down.svg");
+    position: absolute;
+    right: 0;
+}
+
+.accordion {
+    border-bottom: 1px solid var(--lightGrayishBlue);
+    text-align: left;
+}
+
+.accordion .questionWrapper {
+    width: 100%;
+    position: relative;
+}
+
+.question-active {
+    color: var(--darkDesaturatedBlue);
+    font-weight: 700;
+}
+
+.accordion .answer {
+    height: 0;
+    overflow: hidden;
+    transition: 2000ms ease height;
+}
+.accordion p {
+    padding-bottom: 15px;
+}
+
+@media only screen and (min-width: 1024px) {
+    .faq {
+        width: 60%;
+        height: 100%;
+        padding: 50px 100px;
+        text-align: left;
+    }
+}
+
+/******************* Footer *******************/
 
 .attribution {
     font-size: 11px;
