@@ -1,0 +1,37 @@
+root {
+    /* Primary colours */
+    --darkDesaturatedBlue: hsl(238, 29%, 16%);
+    --softRed: hsl(14, 88%, 65%);
+
+    /* Gradient colours */
+    --softViolet: hsl(273, 75%, 66%);
+    --softBlue: hsl(240, 73%, 65%);
+
+    /* Text colours */
+    --darkGrayishBlue: hsl(237, 12%, 33%);
+    --grayishBlue: hsl(240, 6%, 50%);
+
+    /* Divider colour */
+    --lightGrayishBlue: hsl(240, 5%, 91%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(hsl(273, 75%, 66%) 0%, hsl(240, 73%, 65%) 100%);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
