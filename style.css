@@ -181,8 +181,11 @@ main {
 .attribution {
     font-size: 11px;
     text-align: center;
-    margin-bottom: 20px;
+    width: 85%;
+    max-width: 318px;
+    margin: 0 auto 20px;
 }
+
 .attribution a {
     color: hsl(228, 45%, 34%);
     text-decoration: none;
@@ -190,4 +193,10 @@ main {
 
 .attribution a:hover {
     color: var(--softViolet);
+}
+
+@media only screen and (min-width: 1024px) {
+    .attribution {
+        max-width: 1024px;
+    }
 }
