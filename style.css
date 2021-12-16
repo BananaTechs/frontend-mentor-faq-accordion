@@ -46,7 +46,7 @@ main {
 
 .component {
     width: 85%;
-    margin: 150px auto 0;
+    margin: 150px auto 100px;
     background-color: white;
     background-image: url("./images/bg-pattern-mobile.svg");
     background-repeat: no-repeat;
@@ -161,7 +161,7 @@ main {
 .accordion .answer {
     height: 0;
     overflow: hidden;
-    transition: 2000ms ease height;
+    transition: height 2000ms ease;
 }
 .accordion p {
     padding-bottom: 15px;
@@ -181,7 +181,13 @@ main {
 .attribution {
     font-size: 11px;
     text-align: center;
+    margin-bottom: 20px;
 }
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: hsl(228, 45%, 34%);
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    color: var(--softViolet);
 }
