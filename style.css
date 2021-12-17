@@ -122,14 +122,8 @@ main {
 
 .faq h2 {
     font-size: 12px;
-    font-weight: 400;
     margin: 15px 0;
-    color: var(--darkGrayishBlue);
     cursor: pointer;
-}
-
-.faq h2:hover {
-    color: var(--softRed);
 }
 
 .faq h2::after {
@@ -146,6 +140,15 @@ main {
 .accordion .questionWrapper {
     width: 100%;
     position: relative;
+}
+
+.question-inactive {
+    color: var(--darkGrayishBlue);
+    font-weight: 400;
+}
+
+.question-inactive:hover {
+    color: var(--softRed);
 }
 
 .question-active {
