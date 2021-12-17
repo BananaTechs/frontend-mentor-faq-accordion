@@ -18,14 +18,19 @@ document.querySelectorAll(".question").forEach(question => {
 
 function close(target) {
     target.nextElementSibling.style.height = 0;
-    // target.classList.remove("question-active");
+    target.classList.remove("question-active");
+
+    //TO-DO: Fix classList adding
     target.style.color = "hsl(237, 12%, 33%)";
     target.style.fontWeight = 400;
 }
 
 function open(target) {
-    target.nextElementSibling.style.height = "auto";
-    // target.classList.add("question-active");
+    const height = target.nextElementSibling.scrollHeight;
+    target.nextElementSibling.style.height = height + "px";
+    target.classList.add("question-active");
+    
+    //TO-DO: Fix classList adding
     target.style.color = "hsl(238, 29%, 16%)";
     target.style.fontWeight = 700;
 }
