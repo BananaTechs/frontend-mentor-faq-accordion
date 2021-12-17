@@ -28,6 +28,7 @@ body {
     background: linear-gradient(var(--softViolet), var(--softBlue)) no-repeat;
     font: 12px 'Kumbh Sans', sans-serif;
     text-align: center;
+    min-height: 100vh;
 }
 
 main {
