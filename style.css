@@ -25,11 +25,8 @@
 
 body {
     width: 100%;
-    background-image: linear-gradient(var(--softViolet), var(--softBlue));
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    font-family: 'Kumbh Sans', sans-serif;
-    font-size: 12px;
+    background: linear-gradient(var(--softViolet), var(--softBlue)) no-repeat;
+    font: 12px 'Kumbh Sans', sans-serif;
     text-align: center;
 }
 
@@ -47,11 +44,7 @@ main {
 .component {
     width: 85%;
     margin: 150px auto 100px;
-    background-color: white;
-    background-image: url("./images/bg-pattern-mobile.svg");
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-size: 75%;
+    background: white  url("./images/bg-pattern-mobile.svg") no-repeat center top/75%;
     border-radius: 20px;
 }
 
@@ -87,8 +80,7 @@ main {
 
     .illustration {
         position: relative;
-        background-image: url("./images/bg-pattern-desktop.svg");
-        background-position: right -300px;
+        background: url("./images/bg-pattern-desktop.svg") right -300px;
         width: 40%;
         height: 100%;
     }
@@ -167,7 +159,7 @@ main {
 .accordion .answer {
     height: 0;
     overflow: hidden;
-    transition: 0.5s ease height;
+    transition: height 0.5s ease;
 }
 .accordion p {
     padding-bottom: 15px;
